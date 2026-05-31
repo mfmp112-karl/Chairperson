@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chairperson — Orientation Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --mustard: #C9A84C;
+    --mustard-light: #E8C96A;
+    --dark: #1A1A18;
+    --dark-mid: #2D2D2A;
+    --charcoal: #3E3E3A;
+    --warm-grey: #7A7870;
+    --rule: #C9A84C44;
+    --white: #FDFCF9;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background-color: var(--dark); color: var(--cream); font-family: 'Jost', sans-serif; font-weight: 300; line-height: 1.75; min-height: 100vh; }
+  .page-wrap { max-width: 680px; margin: 0 auto; padding: 0 24px 80px; }
+  .header-band { background-color: var(--mustard); margin: 0 -24px; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .dept-label { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dark); }
+  .guide-tag { font-family: 'Jost', sans-serif; font-weight: 400; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dark-mid); }
+  .salutation-block { padding: 52px 0 36px; border-bottom: 1px solid var(--rule); }
+  .to-line { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--warm-grey); margin-bottom: 6px; letter-spacing: 0.03em; }
+  .salutation-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 8vw, 52px); font-weight: 500; line-height: 1.1; color: var(--white); margin-bottom: 10px; }
+  .salutation-sub { font-family: 'Jost', sans-serif; font-weight: 400; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mustard); }
+  .verse-block { margin: 40px 0; padding: 24px 28px; border-left: 3px solid var(--mustard); background: rgba(201, 168, 76, 0.06); }
+  .verse-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; line-height: 1.6; color: var(--cream); margin-bottom: 8px; }
+  .verse-ref { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mustard); }
+  .section { margin-top: 44px; }
+  .section-label { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mustard); margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+  .section-heading { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; color: var(--white); margin-bottom: 16px; line-height: 1.2; }
+  .body-text { font-size: 15px; color: var(--cream); line-height: 1.8; margin-bottom: 16px; }
+  .body-text strong, strong { font-weight: 600; color: var(--white); }
+  .sub-heading { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mustard-light); margin: 28px 0 12px; }
+  ul.clean-list { list-style: none; padding: 0; margin-bottom: 16px; }
+  ul.clean-list li { font-size: 15px; color: var(--cream); line-height: 1.75; padding: 7px 0 7px 20px; position: relative; border-bottom: 1px solid rgba(201, 168, 76, 0.1); }
+  ul.clean-list li:last-child { border-bottom: none; }
+  ul.clean-list li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 5px; height: 5px; border-radius: 50%; background: var(--mustard); }
+  .info-card { background: var(--dark-mid); border: 1px solid rgba(201, 168, 76, 0.2); border-radius: 2px; padding: 24px 28px; margin-bottom: 16px; }
+  .info-card-row { display: flex; gap: 16px; padding: 8px 0; border-bottom: 1px solid rgba(201, 168, 76, 0.1); align-items: baseline; }
+  .info-card-row:last-child { border-bottom: none; }
+  .info-label { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mustard); min-width: 110px; }
+  .info-value { font-size: 14px; color: var(--cream); line-height: 1.6; }
+  .timeline { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .timeline thead tr { background: var(--mustard); }
+  .timeline thead th { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dark); padding: 10px 14px; text-align: left; }
+  .timeline tbody tr { border-bottom: 1px solid rgba(201, 168, 76, 0.12); }
+  .timeline tbody tr:nth-child(even) { background: rgba(201, 168, 76, 0.04); }
+  .timeline tbody td { font-size: 14px; color: var(--cream); padding: 12px 14px; vertical-align: top; line-height: 1.65; }
+  .timeline tbody td:first-child { font-weight: 500; color: var(--mustard-light); white-space: nowrap; width: 90px; }
+  .sop-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .sop-table thead tr { background: var(--dark-mid); }
+  .sop-table thead th { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mustard); padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--rule); }
+  .sop-table tbody tr { border-bottom: 1px solid rgba(201, 168, 76, 0.1); }
+  .sop-table tbody td { font-size: 14px; color: var(--cream); padding: 11px 14px; vertical-align: top; line-height: 1.6; }
+  .sop-table tbody td:first-child { color: var(--mustard-light); font-weight: 500; white-space: nowrap; }
+  .closing-block { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--rule); }
+  .closing-verse { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; line-height: 1.65; color: var(--cream); margin-bottom: 10px; }
+  .closing-ref { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-grey); margin-bottom: 36px; }
+  .sign-off { font-family: 'Cormorant Garamond', serif; font-size: 15px; color: var(--warm-grey); line-height: 2; }
+  .sign-off strong { color: var(--cream); font-weight: 500; }
+  .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; }
+  .footer-dept { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm-grey); }
+  .footer-year { font-size: 10px; color: var(--warm-grey); }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="header-band">
+    <span class="dept-label">Ushering Department</span>
+    <span class="guide-tag">Orientation Guide</span>
+  </div>
+
+  <div class="salutation-block">
+    <p class="to-line">To Jack, from Caleb —</p>
+    <h1 class="salutation-title">You Hold the<br>Pastoral Heart.</h1>
+    <p class="salutation-sub">Chairperson — Orientation Guide</p>
+  </div>
+
+  <div class="verse-block">
+    <p class="verse-text">"Be shepherds of God's flock that is under your care, watching over them — not because you must, but because you are willing."</p>
+    <p class="verse-ref">1 Peter 5:2 — Jack's Role Verse</p>
+  </div>
+
+  <div class="section">
+    <p class="body-text">
+      Jack, you are stepping into the Chairperson role — and I want you to understand from the start what this is and what it is not. It is not an administrative title. Makena holds the operational engine. What you hold is the people — their spiritual health, their unity, and the prayerful atmosphere that everything else is built on.
+    </p>
+    <p class="body-text">
+      This department can be logistically excellent and spiritually hollow. Your job is to make sure that never happens. You set the temperature. Read this guide carefully, and come back to it whenever you need a reminder of your lane.
+    </p>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Reporting Lines</p>
+    <h2 class="section-heading">Who You Report To</h2>
+    <div class="info-card">
+      <div class="info-card-row">
+        <span class="info-label">Directly</span>
+        <span class="info-value"><strong>Caleb</strong> — Overseer. Your primary accountability. He convenes the monthly check-in and is your first call on anything requiring oversight authority.</span>
+      </div>
+      <div class="info-card-row">
+        <span class="info-label">Paired With</span>
+        <span class="info-value"><strong>Makena</strong> — ChairLady. You lead together. Your lanes are distinct and equally important. They must never compete.</span>
+      </div>
+    </div>
+
+    <p class="sub-heading">Who Looks to You</p>
+    <p class="body-text">All department members look to you pastorally. In terms of direct oversight, you and Makena jointly hold:</p>
+    <ul class="clean-list">
+      <li><strong>Faith</strong> — Prayer Secretary reports directly to you</li>
+      <li><strong>Gloria</strong> — Events and Communications Lead, pastorally</li>
+      <li>All general ushers — every one of them</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Your Role</p>
+    <h2 class="section-heading">What You Do</h2>
+    <p class="body-text">In one sentence: you set the spiritual temperature of the department and ensure every person in it is seen, cared for, and growing.</p>
+
+    <p class="sub-heading">Every Sunday</p>
+    <ul class="clean-list">
+      <li>Serve on the floor as an active usher — your presence matters before service begins</li>
+      <li>Hold the pre-service tone; lead or open prayer before Sunday deployment if called upon</li>
+      <li>Be available to any usher who needs pastoral support during or after service</li>
+    </ul>
+
+    <p class="sub-heading">Every Month</p>
+    <ul class="clean-list">
+      <li>Approve Faith's prayer theme before it is published to the group</li>
+      <li>Confirm the date and lead — or assign a leader for — the all-ushers prayer meeting</li>
+      <li>Lead the quarterly leaders-only prayer meeting (once per quarter)</li>
+      <li>Attend the monthly leadership check-in with Caleb and Makena</li>
+      <li>Approve Gloria's outing proposal for the month</li>
+    </ul>
+
+    <p class="sub-heading">Every Quarter</p>
+    <ul class="clean-list">
+      <li>Approve the retreat concept — format, programme, and its pastoral dimension</li>
+      <li>Lead or co-lead the retreat spiritually</li>
+      <li>Review department health with Makena and Caleb at the quarterly check-in</li>
+    </ul>
+
+    <p class="sub-heading">Ongoing</p>
+    <ul class="clean-list">
+      <li>Stay pastorally aware of every member — not just the leaders</li>
+      <li>Surface any welfare, conduct, or spiritual concern at the monthly check-in with Caleb and Makena</li>
+      <li>Support Makena when disciplinary conversations are necessary</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Procedures</p>
+    <h2 class="section-heading">SOPs You Are Part Of</h2>
+    <table class="sop-table">
+      <thead>
+        <tr><th>SOP</th><th>Your Role</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>SOP 01 — Sunday Execution</td><td>Floor usher and pastoral presence</td></tr>
+        <tr><td>SOP 03 — Absentee Follow-Up</td><td>Notified on repeated or pastoral-level absences; steps in personally for serious cases</td></tr>
+        <tr><td>SOP 04 — Onboarding</td><td>Briefs every new member alongside Makena</td></tr>
+        <tr><td>SOP 07 — Monthly Check-In</td><td>Attendee alongside Makena and Caleb</td></tr>
+        <tr><td>SOP 09 — Prayer Rhythms</td><td>Leads or assigns a leader for every prayer meeting; approves Faith's themes</td></tr>
+        <tr><td>SOP 10 — Events & Communications</td><td>Approves retreat programme and monthly outing proposals from Gloria</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Your First Month</p>
+    <h2 class="section-heading">The First 30 Days</h2>
+    <table class="timeline">
+      <thead><tr><th>Week</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr><td>Week 1</td><td>Receive this guide. Be briefed by Caleb and Makena. Shadow the outgoing Chairperson across all touchpoints — observe before you lead.</td></tr>
+        <tr><td>Week 2</td><td>Attend Sunday alongside the outgoing Chairperson. Observe floor presence and how the pre-service tone is set.</td></tr>
+        <tr><td>Week 3</td><td>Lead your first Sunday deployment. Handle your first prayer theme approval with Faith.</td></tr>
+        <tr><td>Week 4</td><td>Attend the monthly check-in with Caleb and Makena. Debrief with Caleb privately afterward.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="closing-block">
+    <p class="closing-verse">"The department will reflect your spiritual posture. Lead from a place of prayer, not pressure."</p>
+    <p class="closing-ref" style="margin-bottom:28px;">— From the Department's Operating Framework</p>
+    <p class="sign-off">
+      With full confidence in you,<br><br>
+      <strong>Caleb</strong> — Overseer<br>
+      Ushering Department
+    </p>
+  </div>
+
+  <div class="footer">
+    <span class="footer-dept">Ushering Department</span>
+    <span class="footer-year">2026</span>
+  </div>
+
+</div>
+</body>
+</html>
